@@ -4,7 +4,11 @@
 
 ### Daksh Agrawal
 
-Building local-first software solo, running [Uideas](https://instagram.com/uideasofficial) — video editing, motion graphics, brand identity &amp; web dev for clients, ~50K followers.
+Daksh — "skilled, capable." My parents named me that before I had to earn it. Still working on it.
+
+Founder of [Uideas](https://instagram.com/uideasofficial) — a content studio turning raw ideas into scroll-stopping video, motion, and brand systems. Strategist, scriptwriter, editor — I wear every hat it takes. Grew @uideasofficial to 50K+ followers doing exactly this.
+
+What started as editing reels turned into building the backend most agencies skip: scripting frameworks, production pipelines, AI-assisted workflows — the parts that make content repeatable instead of lucky. That backend building is what lives in this GitHub — tools I build for myself and the studio, local-first, no team, no reviewer, straight to production.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-daksh--agrawal-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daksh-agrawal-/)
 [![Instagram](https://img.shields.io/badge/Instagram-uideasofficial-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/uideasofficial)
@@ -14,15 +18,7 @@ Building local-first software solo, running [Uideas](https://instagram.com/uidea
 
 ---
 
-### About
-
-No team, no reviewer — I ship straight to production. Every tool I build for the agency runs local-first: SQLite over a hosted DB, on-device inference over an API call, unless there's a real reason not to. If it's not something I'd run myself daily, it doesn't ship.
-
 **Currently building:** [Dictator](https://github.com/IntellectDaksh/Dictator) — local voice dictation for Windows. On-device Whisper transcription, cleaned up by a local LLM, no cloud, no accounts.
-
-### Stack
-
-<img src="https://skillicons.dev/icons?i=rust,python,ts,tauri,sqlite,react,nextjs,tailwind&theme=dark" alt="stack icons"/>
 
 ### GitHub stats
 
