@@ -43,20 +43,6 @@ Shipping [Dictator](https://github.com/IntellectDaksh/Dictator) v1, next up is f
 
 </div>
 
-### GitHub activity
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/stats-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/stats-light.svg" />
-  <img alt="github activity dashboard" src="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/stats-dark.svg" width="100%" />
-</picture>
-
-<sub>Custom-built card, not a stitched-together badge stack — see <a href="./.github/scripts/gen-stats.mjs">gen-stats.mjs</a>. Refreshes every 6h. <a href="https://wakatime.com/@IntellectDaksh">wakatime.com/@IntellectDaksh</a> once the plugin's tracked a week.</sub>
-
-</div>
-
 ### Contribution snake
 
 ![Snake workflow](https://github.com/IntellectDaksh/IntellectDaksh/actions/workflows/snake.yml/badge.svg)
