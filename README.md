@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:1f6feb&height=180&section=header&text=Daksh%20Agrawal&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=40&desc=learning%20by%20breaking%20things&descAlignY=58&descSize=18" width="100%" alt="banner"/>
+<img src="./banner.jpg" width="100%" alt="banner"/>
 
 <img src="./Logo.svg" width="480" alt="ascii portrait"/>
 
@@ -65,6 +65,8 @@ Shipping [Dictator](https://github.com/IntellectDaksh/Dictator) v1, next up is f
 </div>
 
 ### Contribution snake
+
+![Snake workflow](https://github.com/IntellectDaksh/IntellectDaksh/actions/workflows/snake.yml/badge.svg)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/snake-dark.svg" />
