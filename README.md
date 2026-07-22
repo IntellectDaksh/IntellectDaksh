@@ -43,14 +43,3 @@ Shipping [Dictator](https://github.com/IntellectDaksh/Dictator) v1, next up is f
 
 </div>
 
-### Contribution snake
-
-![Snake workflow](https://github.com/IntellectDaksh/IntellectDaksh/actions/workflows/snake.yml/badge.svg)
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/snake-light.svg" />
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/snake.svg" />
-</picture>
-
-<sub>Generated every 6h by <a href="./.github/workflows/snake.yml">.github/workflows/snake.yml</a> — first render appears after it runs once.</sub>
