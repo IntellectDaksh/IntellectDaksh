@@ -1,4 +1,4 @@
-name: Generate Snake
+name: Generate profile assets
 
 on:
   schedule:
@@ -14,6 +14,8 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -21,6 +23,16 @@ jobs:
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
             dist/snake-light.svg?palette=github-light
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate custom stats dashboard
+        env:
+          GH_USER: ${{ github.repository_owner }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/gen-stats.mjs
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:

@@ -43,42 +43,17 @@ Shipping [Dictator](https://github.com/IntellectDaksh/Dictator) v1, next up is f
 
 </div>
 
-### GitHub stats
+### GitHub activity
 
 <div align="center">
 
-<table>
-<tr>
-<td>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=percentile" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=default&hide_border=true&count_private=true&rank_icon=percentile" />
-  <img alt="github stats" src="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=percentile" />
-</picture>
-</td>
-<td>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=default&hide_border=true&langs_count=8" />
-  <img alt="top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-</picture>
-</td>
-</tr>
-</table>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=tokyonight&hide_border=true" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=default&hide_border=true" />
-  <img width="70%" alt="github streak" src="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=tokyonight&hide_border=true" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/stats-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/stats-light.svg" />
+  <img alt="github activity dashboard" src="https://raw.githubusercontent.com/IntellectDaksh/IntellectDaksh/output/stats-dark.svg" width="100%" />
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=IntellectDaksh&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&row=1" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=IntellectDaksh&theme=flat&no-frame=true&no-bg=true&margin-w=8&row=1" />
-  <img alt="trophies" src="https://github-profile-trophy.vercel.app/?username=IntellectDaksh&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&row=1" />
-</picture>
-
-<sub><a href="https://wakatime.com/@IntellectDaksh">wakatime.com/@IntellectDaksh</a> — badge goes live once the plugin's tracked a week of coding time.</sub>
+<sub>Custom-built card, not a stitched-together badge stack — see <a href="./.github/scripts/gen-stats.mjs">gen-stats.mjs</a>. Refreshes every 6h. <a href="https://wakatime.com/@IntellectDaksh">wakatime.com/@IntellectDaksh</a> once the plugin's tracked a week.</sub>
 
 </div>
 
