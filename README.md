@@ -18,16 +18,26 @@ What started as editing reels turned into building the backend most agencies ski
 
 ---
 
-**Currently building:** [Dictator](https://github.com/IntellectDaksh/Dictator) — local voice dictation for Windows. On-device Whisper transcription, cleaned up by a local LLM, no cloud, no accounts.
+### Pinned
+
+<div align="center">
+
+<a href="https://github.com/IntellectDaksh/Dictator">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=IntellectDaksh&repo=Dictator&theme=github_dark&hide_border=true" alt="Dictator repo card"/>
+</a>
+
+</div>
 
 ### GitHub stats
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=github_dark&hide_border=true&count_private=true" height="165" alt="github stats"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=github-dark-blue&hide_border=true" height="165" alt="github streak"/>
+<img src="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=github_dark&hide_border=true&count_private=true&rank_icon=percentile" width="49%" alt="github stats"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=github_dark&hide_border=true&langs_count=8" width="49%" alt="top languages"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=github_dark&hide_border=true&langs_count=8" height="165" alt="top languages"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=github-dark-blue&hide_border=true" width="60%" alt="github streak"/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=IntellectDaksh&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&row=1" alt="trophies"/>
 
 </div>
 
@@ -40,5 +50,3 @@ What started as editing reels turned into building the backend most agencies ski
 </picture>
 
 <sub>Generated every 6h by <a href="./.github/workflows/snake.yml">.github/workflows/snake.yml</a> — first render appears after it runs once.</sub>
-
-Everything I build runs on-device by default — no cloud dependency unless there's a real reason for one.
