@@ -4,7 +4,17 @@
 
 <img src="./Logo.svg" width="480" alt="ascii portrait"/>
 
-Learning by breaking things. Uideas pays the bills, this GitHub is where I build tools nobody asked for — some actually work.
+</div>
+
+Daksh — "skilled, capable." My parents named me that before I had to earn it. Still working on it.
+
+I run Uideas — video editing, motion graphics, brand identity, and web dev, mostly for creators and small brands who need content that doesn't look like everyone else's. No team behind me, so I've picked up scripting, production pipelines, and enough code to build the tools an agency my size usually can't afford. Grew [@uideasofficial](https://instagram.com/uideasofficial) to 50K+ followers doing exactly this.
+
+This GitHub is the other half — where the "backend" work lives. I'm not a trained engineer, I learn by breaking things until they work, then breaking them again on purpose to see why. Most of what's here started as "I needed this for the studio and didn't want to depend on someone else's cloud tool for it." Local-first by default, not because I'm dogmatic about it, but because it's usually the harder and more interesting way to build something.
+
+If you're into either side of this — the content or the tools — that's the kind of work I actually enjoy.
+
+<div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-daksh--agrawal-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daksh-agrawal-/)
 [![Instagram](https://img.shields.io/badge/Instagram-uideasofficial-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/uideasofficial)
@@ -25,9 +35,9 @@ Shipping [Dictator](https://github.com/IntellectDaksh/Dictator) v1, next up is f
 
 <a href="https://github.com/IntellectDaksh/Dictator">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=IntellectDaksh&repo=Dictator&theme=github_dark&hide_border=true" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=IntellectDaksh&repo=Dictator&theme=tokyonight&hide_border=true" />
   <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=IntellectDaksh&repo=Dictator&theme=default&hide_border=true" />
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=IntellectDaksh&repo=Dictator&theme=github_dark&hide_border=true" alt="Dictator repo card"/>
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=IntellectDaksh&repo=Dictator&theme=tokyonight&hide_border=true" alt="Dictator repo card"/>
 </picture>
 </a>
 
@@ -37,27 +47,35 @@ Shipping [Dictator](https://github.com/IntellectDaksh/Dictator) v1, next up is f
 
 <div align="center">
 
+<table>
+<tr>
+<td>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=github_dark&hide_border=true&count_private=true&rank_icon=percentile" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=percentile" />
   <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=default&hide_border=true&count_private=true&rank_icon=percentile" />
-  <img width="49%" alt="github stats" src="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=github_dark&hide_border=true&count_private=true&rank_icon=percentile" />
+  <img alt="github stats" src="https://github-readme-stats.vercel.app/api?username=IntellectDaksh&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=percentile" />
 </picture>
+</td>
+<td>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=github_dark&hide_border=true&langs_count=8" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
   <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=default&hide_border=true&langs_count=8" />
-  <img width="49%" alt="top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=github_dark&hide_border=true&langs_count=8" />
+  <img alt="top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=IntellectDaksh&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
 </picture>
+</td>
+</tr>
+</table>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=github-dark-blue&hide_border=true" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=tokyonight&hide_border=true" />
   <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=default&hide_border=true" />
-  <img width="60%" alt="github streak" src="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=github-dark-blue&hide_border=true" />
+  <img width="70%" alt="github streak" src="https://github-readme-streak-stats.herokuapp.com/?user=IntellectDaksh&theme=tokyonight&hide_border=true" />
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=IntellectDaksh&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&row=1" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=IntellectDaksh&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&row=1" />
   <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=IntellectDaksh&theme=flat&no-frame=true&no-bg=true&margin-w=8&row=1" />
-  <img alt="trophies" src="https://github-profile-trophy.vercel.app/?username=IntellectDaksh&theme=darkhub&no-frame=true&no-bg=true&margin-w=8&row=1" />
+  <img alt="trophies" src="https://github-profile-trophy.vercel.app/?username=IntellectDaksh&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&row=1" />
 </picture>
 
 <sub><a href="https://wakatime.com/@IntellectDaksh">wakatime.com/@IntellectDaksh</a> — badge goes live once the plugin's tracked a week of coding time.</sub>
