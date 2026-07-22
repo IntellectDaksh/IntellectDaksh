@@ -28,6 +28,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Fix dist/ ownership left by the containerized snk action
+        run: sudo chown -R $(whoami) dist
+
       - name: Generate custom stats dashboard
         env:
           GH_USER: ${{ github.repository_owner }}
