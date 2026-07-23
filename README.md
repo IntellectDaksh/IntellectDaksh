@@ -29,17 +29,3 @@ If you're into either side of this — the content or the tools — that's the k
 Shipping [Dictator](https://github.com/IntellectDaksh/Dictator) v1, next up is figuring out what breaks in it.
 <sub>Updated 2026-07-22 — I'll forget to update this, call it out if it goes stale.</sub>
 
-### Pinned
-
-<div align="center">
-
-<a href="https://github.com/IntellectDaksh/Dictator">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=IntellectDaksh&repo=Dictator&theme=tokyonight&hide_border=true" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=IntellectDaksh&repo=Dictator&theme=default&hide_border=true" />
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=IntellectDaksh&repo=Dictator&theme=tokyonight&hide_border=true" alt="Dictator repo card"/>
-</picture>
-</a>
-
-</div>
-
