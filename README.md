@@ -22,10 +22,3 @@ If you're into either side of this — the content or the tools — that's the k
 
 </div>
 
----
-
-### Now
-
-Building and shipping multiple hackathon projects! I'll be consistently pushing updates to them as time goes on.
-<sub>Updated 2026-09-17 — I'll forget to update this, call it out if it goes stale.</sub>
-
