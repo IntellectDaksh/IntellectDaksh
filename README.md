@@ -26,6 +26,6 @@ If you're into either side of this — the content or the tools — that's the k
 
 ### Now
 
-Shipping [Dictator](https://github.com/IntellectDaksh/Dictator) v1, next up is figuring out what breaks in it.
-<sub>Updated 2026-07-22 — I'll forget to update this, call it out if it goes stale.</sub>
+Building and shipping multiple hackathon projects! I'll be consistently pushing updates to them as time goes on.
+<sub>Updated 2026-09-17 — I'll forget to update this, call it out if it goes stale.</sub>
 
