@@ -1,0 +1,24 @@
+<div align="center">
+
+<img src="./banner.jpg" width="100%" alt="banner"/>
+
+<img src="./Logo.svg" width="480" alt="ascii portrait"/>
+
+</div>
+
+Daksh — "skilled, capable." My parents named me that before I had to earn it. Still working on it.
+
+I run Uideas — video editing, motion graphics, brand identity, and web dev, mostly for creators and small brands who need content that doesn't look like everyone else's. No team behind me, so I've picked up scripting, production pipelines, and enough code to build the tools an agency my size usually can't afford. Grew [@uideasofficial](https://instagram.com/uideasofficial) to 50K+ followers doing exactly this.
+
+This GitHub is the other half — where the "backend" work lives. I'm not a trained engineer, I learn by breaking things until they work, then breaking them again on purpose to see why. Most of what's here started as "I needed this for the studio and didn't want to depend on someone else's cloud tool for it." Local-first by default, not because I'm dogmatic about it, but because it's usually the harder and more interesting way to build something.
+
+If you're into either side of this — the content or the tools — that's the kind of work I actually enjoy.
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-daksh--agrawal-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daksh-agrawal-/)
+[![Instagram](https://img.shields.io/badge/Instagram-uideasofficial-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/uideasofficial)
+[![Email](https://img.shields.io/badge/Email-uideasofficial%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:uideasofficial@gmail.com)
+
+</div>
+
