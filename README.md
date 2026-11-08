@@ -29,15 +29,8 @@ If you're into either side of this — the content or the tools — that's the k
 
 <br/><br/>
 
-<!-- Real GitHub Statistics HUD -->
-<img src="./assets/pixel-hud.svg" width="100%" alt="GitHub Metrics: Contributions, Pull Requests, Stars, Streak" />
-
-<br/>
-
-<!-- Live GitHub Streak & Contributions -->
-<a href="https://github.com/IntellectDaksh">
-  <img src="https://streak-stats.demolab.com/?user=IntellectDaksh&theme=dark&background=151b23&border=262c36&stroke=262c36&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e&hide_border=false" alt="Daksh's GitHub Streak & Contributions" />
-</a>
+<!-- Pixel HUD: Real Stats (Commits, Pull Requests, Stars, Streak) -->
+<img src="./assets/pixel-hud.svg" width="100%" alt="Commits, pull requests, stars and best streak" />
 
 <br/><br/>
 

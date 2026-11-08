@@ -13,8 +13,70 @@ os.makedirs(ASSETS_DIR, exist_ok=True)
 USERNAME = "IntellectDaksh"
 AVATAR_URL = "https://avatars.githubusercontent.com/u/296588924?u=535bf15d4c953b1362792d02dddaf82f30661b28&v=4"
 
+DIGITS = {
+    '0': [
+        (4, 0, 12, 4), (0, 4, 4, 4), (16, 4, 4, 4), (0, 8, 4, 4), (16, 8, 4, 4),
+        (0, 12, 4, 4), (16, 12, 4, 4), (0, 16, 4, 4), (16, 16, 4, 4),
+        (0, 20, 4, 4), (16, 20, 4, 4), (4, 24, 12, 4)
+    ],
+    '1': [
+        (4, 0, 4, 4), (0, 4, 8, 4), (4, 8, 4, 4), (4, 12, 4, 4),
+        (4, 16, 4, 4), (4, 20, 4, 4), (0, 24, 12, 4)
+    ],
+    '2': [
+        (4, 0, 12, 4), (0, 4, 4, 4), (16, 4, 4, 4), (16, 8, 4, 4),
+        (12, 12, 4, 4), (8, 16, 4, 4), (4, 20, 4, 4), (0, 24, 20, 4)
+    ],
+    '3': [
+        (0, 0, 16, 4), (16, 4, 4, 4), (12, 8, 4, 4), (4, 12, 12, 4),
+        (16, 16, 4, 4), (16, 20, 4, 4), (0, 24, 16, 4)
+    ],
+    '4': [
+        (12, 0, 4, 4), (8, 4, 4, 4), (4, 8, 4, 4), (0, 12, 4, 4),
+        (0, 16, 20, 4), (12, 20, 4, 4), (12, 24, 4, 4)
+    ],
+    '5': [
+        (0, 0, 20, 4), (0, 4, 4, 4), (0, 8, 16, 4), (16, 12, 4, 4),
+        (16, 16, 4, 4), (16, 20, 4, 4), (0, 24, 16, 4)
+    ],
+    '6': [
+        (8, 0, 8, 4), (4, 4, 4, 4), (0, 8, 4, 4), (0, 12, 16, 4),
+        (0, 16, 4, 4), (16, 16, 4, 4), (0, 20, 4, 4), (16, 20, 4, 4), (4, 24, 12, 4)
+    ],
+    '7': [
+        (0, 0, 20, 4), (16, 4, 4, 4), (12, 8, 4, 4), (8, 12, 4, 4),
+        (4, 16, 4, 4), (4, 20, 4, 4), (4, 24, 4, 4)
+    ],
+    '8': [
+        (4, 0, 12, 4), (0, 4, 4, 4), (16, 4, 4, 4), (4, 8, 12, 4),
+        (0, 12, 4, 4), (16, 12, 4, 4), (0, 16, 4, 4), (16, 16, 4, 4),
+        (0, 20, 4, 4), (16, 20, 4, 4), (4, 24, 12, 4)
+    ],
+    '9': [
+        (4, 0, 12, 4), (0, 4, 4, 4), (16, 4, 4, 4), (0, 8, 4, 4), (16, 8, 4, 4),
+        (4, 12, 16, 4), (16, 16, 4, 4), (12, 20, 4, 4), (4, 24, 8, 4)
+    ],
+    'D': [
+        (0, 0, 16, 4), (0, 4, 4, 4), (16, 4, 4, 4), (0, 8, 4, 4), (16, 8, 4, 4),
+        (0, 12, 4, 4), (16, 12, 4, 4), (0, 16, 4, 4), (16, 16, 4, 4),
+        (0, 20, 4, 4), (16, 20, 4, 4), (0, 24, 16, 4)
+    ]
+}
+
+def render_number_rects(text_str, start_x):
+    rects = []
+    curr_x = start_x
+    for ch in text_str:
+        if ch in DIGITS:
+            char_width = 12 if ch == '1' else 20
+            for rx, ry, w, h in DIGITS[ch]:
+                rects.append(f'<rect x="{curr_x + rx}" y="{18 + ry}" width="{w}" height="{h}" fill="#f0f6fc"/>')
+            curr_x += char_width + 4
+        else:
+            curr_x += 8
+    return rects
+
 def get_real_stats_and_repos():
-    # Use GITHUB_TOKEN if available in env, otherwise fallback to gh cli or unauthenticated public api
     token = os.environ.get("GITHUB_TOKEN")
     query = """
     query {
@@ -62,16 +124,15 @@ def get_real_stats_and_repos():
             res = urllib.request.urlopen(req, timeout=15)
             data = json.loads(res.read().decode('utf-8'))
         except Exception as e:
-            print("GraphQL request with token failed:", e)
+            print("GraphQL with token failed:", e)
 
     if not data:
-        # Fallback to local gh cli
         try:
             cmd = ["gh", "api", "graphql", "-f", f"query={query}"]
             res = subprocess.run(cmd, capture_output=True, text=True, check=True)
             data = json.loads(res.stdout)
         except Exception as e:
-            print("Local gh cli failed, using REST fallback:", e)
+            print("Local gh cli failed:", e)
 
     if data and "data" in data and data["data"]["user"]:
         u = data["data"]["user"]
@@ -81,7 +142,6 @@ def get_real_stats_and_repos():
         repos = u["repositories"]["nodes"]
         total_stars = sum(r["stargazerCount"] for r in repos)
 
-        # Calculate streak
         days = []
         for w in cal["weeks"]:
             for d in w["contributionDays"]:
@@ -104,7 +164,6 @@ def get_real_stats_and_repos():
             "repos": repos
         }
 
-    # Safe hardcoded fallback if API fails
     return {
         "contributions": 430,
         "prs": 11,
@@ -119,46 +178,35 @@ def get_real_stats_and_repos():
     }
 
 def generate_pixel_hud(contributions, prs, stars, streak):
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="880" height="84" viewBox="0 0 880 84" role="img" aria-label="CONTRIBUTIONS {contributions}, PULL REQS {prs}, STARS {stars}, BEST STREAK {streak}D">
-  <defs>
-    <linearGradient id="hud-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#151b23"/>
-      <stop offset="100%" stop-color="#0d1117"/>
-    </linearGradient>
-  </defs>
-  <rect x="0.5" y="0.5" width="879" height="83" rx="10" fill="url(#hud-bg)" stroke="#262c36" stroke-width="1"/>
-  
-  <!-- Column 1: CONTRIBUTIONS -->
-  <g transform="translate(60, 0)">
-    <text x="50" y="38" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#f0f6fc" letter-spacing="1.5px">{contributions}</text>
-    <text x="50" y="58" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#7d8590" letter-spacing="1.8px">CONTRIBUTIONS</text>
-  </g>
-  
-  <line x1="240" y1="20" x2="240" y2="64" stroke="#262c36" stroke-width="1"/>
-  
-  <!-- Column 2: PULL REQS -->
-  <g transform="translate(260, 0)">
-    <text x="50" y="38" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#f0f6fc" letter-spacing="1.5px">{prs}</text>
-    <text x="50" y="58" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#7d8590" letter-spacing="1.8px">PULL REQS</text>
-  </g>
-  
-  <line x1="450" y1="20" x2="450" y2="64" stroke="#262c36" stroke-width="1"/>
-  
-  <!-- Column 3: STARS -->
-  <g transform="translate(470, 0)">
-    <text x="50" y="38" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#f0f6fc" letter-spacing="1.5px">{stars}</text>
-    <text x="50" y="58" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#7d8590" letter-spacing="1.8px">STARS</text>
-  </g>
-  
-  <line x1="650" y1="20" x2="650" y2="64" stroke="#262c36" stroke-width="1"/>
-  
-  <!-- Column 4: BEST STREAK -->
-  <g transform="translate(680, 0)">
-    <text x="60" y="38" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="800" fill="#f0f6fc" letter-spacing="1.5px">{streak}D</text>
-    <text x="60" y="58" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#7d8590" letter-spacing="1.8px">BEST STREAK</text>
-  </g>
-</svg>"""
-    return svg
+    # Fetch base template to preserve exact crisp pixel labels
+    url = f'https://www.gitskins.com/api/section/pixel-hud?username={USERNAME}&mode=dark'
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        base_svg = urllib.request.urlopen(req, timeout=10).read().decode('utf-8', errors='ignore')
+    except Exception:
+        # Fallback to local copy
+        with open(os.path.join(ASSETS_DIR, "pixel-hud.svg"), "r", encoding="utf-8") as f:
+            base_svg = f.read()
+
+    # Extract all label rects (y >= 50)
+    all_orig_rects = re.findall(r'<rect x="([^"]+)" y="([^"]+)" width="([^"]+)" height="([^"]+)" fill="([^"]+)"', base_svg)
+    kept_label_rects = [
+        f'<rect x="{r[0]}" y="{r[1]}" width="{r[2]}" height="{r[3]}" fill="{r[4]}"/>'
+        for r in all_orig_rects if float(r[1]) >= 50 and r[4] != '#151b23'
+    ]
+
+    # Generate real pixel digits
+    num_rects = []
+    num_rects.extend(render_number_rects(str(contributions), 28))
+    num_rects.extend(render_number_rects(str(prs), 246))
+    num_rects.extend(render_number_rects(str(stars), 460))
+    num_rects.extend(render_number_rects(f"{streak}D", 670))
+
+    hud_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="880" height="84" viewBox="0 0 880 84" role="img" aria-label="COMMITS {contributions}, PULL REQS {prs}, STARS {stars}, BEST STREAK {streak}D"><style>@media (prefers-reduced-motion: reduce){{*{{animation:none!important}}}}</style><rect x=".5" y=".5" width="879" height="83" rx="12" fill="#151b23" stroke="#262c36"/><g shape-rendering="crispEdges">
+{''.join(num_rects)}
+{''.join(kept_label_rects)}
+</g></svg>"""
+    return hud_svg
 
 def generate_solar_system(repos_data):
     width = 880
@@ -166,12 +214,10 @@ def generate_solar_system(repos_data):
     cx = 440
     cy = 270
 
-    # Filter out profile repo itself unless it's the only one
     public_repos = [r for r in repos_data if r['name'] != USERNAME]
     if not public_repos:
         public_repos = repos_data
 
-    # Limit to top 6 repos so orbits remain spacious and beautiful
     display_repos = public_repos[:6]
     base_rx = 130
     base_ry = 65
@@ -315,28 +361,26 @@ def fetch_and_clean_room():
 def main():
     print("Fetching real stats and repositories...")
     stats = get_real_stats_and_repos()
-    print(f"Stats: {stats['contributions']} contributions, {stats['prs']} PRs, {stats['stars']} stars, {stats['streak']} streak")
-    print(f"Public repos found: {[r['name'] for r in stats['repos']]}")
 
-    print("Generating pixel-hud.svg with REAL stats...")
+    print("Generating pixel-hud.svg with authentic pixel digits...")
     hud_svg = generate_pixel_hud(stats['contributions'], stats['prs'], stats['stars'], stats['streak'])
     with open(os.path.join(ASSETS_DIR, "pixel-hud.svg"), "w", encoding="utf-8") as f:
         f.write(hud_svg)
 
-    print("Generating solar-orbits.svg with PUBLIC REPOSITORIES...")
+    print("Generating solar-orbits.svg with public repositories...")
     solar_svg = generate_solar_system(stats['repos'])
     with open(os.path.join(ASSETS_DIR, "solar-orbits.svg"), "w", encoding="utf-8") as f:
         f.write(solar_svg)
 
-    print("Updating pixel-room.svg (clean without watermark)...")
+    print("Updating pixel-room.svg (watermark-free)...")
     try:
         room_svg = fetch_and_clean_room()
         with open(os.path.join(ASSETS_DIR, "pixel-room.svg"), "w", encoding="utf-8") as f:
             f.write(room_svg)
     except Exception as e:
-        print("Could not refresh pixel-room from upstream:", e)
+        print("Could not refresh pixel-room:", e)
 
-    print("Done! All assets generated successfully.")
+    print("Done! All assets generated.")
 
 if __name__ == '__main__':
     main()
